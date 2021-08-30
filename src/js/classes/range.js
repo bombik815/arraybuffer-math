@@ -2,10 +2,9 @@
 import Character from './character';
 
 export default class Range extends Character {
-  constructor(name, distance, attack = 10, stoned = false) {
+  constructor(name, distance, stoned = false) {
     super(name);
     this.distance = distance;
-    this._attack = attack;
     this._stoned = stoned;
   }
 
@@ -26,9 +25,7 @@ export default class Range extends Character {
         const stonedAttack = rangeAttack - Math.log2(+this.distance) * 5;
         return Math.round(stonedAttack);
       }
-      if (this._stoned === false) {
-        return rangeAttack;
-      }
+      return rangeAttack;
     }
     return this._attack;
   }

@@ -1,9 +1,10 @@
 import Daemon from './classes/daemon';
-import Magician from './classes/magician';
 
-const demon = new Daemon('demon', 2, 100, true);
-const mag = new Magician('mag', 2, 100);
-
+const hero = new Daemon('demon');
+hero.attack = 100;
+hero.stoned = true;
+hero.distance = 2;
 console.log('app worked');
-console.log(demon.attack);
-console.log(mag.attack);
+console.log(hero);
+console.log(hero.attack);
+console.log(hero.stoned);

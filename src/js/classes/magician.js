@@ -1,10 +1,11 @@
 /* eslint-disable no-underscore-dangle */
 import Range from './range';
 
-export default class Magician extends Range {
-  constructor(name, distance, attack, stoned) {
-    super(name, distance, attack, stoned);
+export default class Daemon extends Range {
+  constructor(name, attack = 10, defence = 40) {
+    super(name);
     this.type = 'Magician';
-    this.defence = 40;
+    this.attack = attack;
+    this.defence = defence;
   }
 }
