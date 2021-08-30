@@ -2,10 +2,19 @@
 import Character from './character';
 
 export default class Range extends Character {
-  constructor(name, distance, attack) {
+  constructor(name, distance, attack, stoned = false) {
     super(name);
     this.distance = distance;
     this._attack = attack;
+    this._stoned = stoned;
+  }
+
+  get stoned() {
+    return this._stoned;
+  }
+
+  set stoned(stoned) {
+    this._stoned = stoned;
   }
 
   get attack() {

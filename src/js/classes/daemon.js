@@ -2,17 +2,8 @@
 import Range from './range';
 
 export default class Daemon extends Range {
-  constructor(name, distance, attack, stoned) {
+  constructor(name, distance, attack) {
     super(name, distance, attack);
     this.type = 'Daemon';
-    this._stoned = stoned;
-  }
-
-  get stoned() {
-    return this._stoned;
-  }
-
-  set stoned(stoned) {
-    this._stoned = stoned;
   }
 }
