@@ -1,10 +1,18 @@
-import Character from './character';
+/* eslint-disable no-underscore-dangle */
+import Range from './range';
 
-export default class Daemon extends Character {
-  constructor(name, health, level, attack = 10, defence = 40) {
-    super(name, health, level);
+export default class Daemon extends Range {
+  constructor(name, distance, attack, stoned) {
+    super(name, distance, attack);
     this.type = 'Daemon';
-    this.attack = attack;
-    this.defence = defence;
+    this._stoned = stoned;
+  }
+
+  get stoned() {
+    return this._stoned;
+  }
+
+  set stoned(stoned) {
+    this._stoned = stoned;
   }
 }
